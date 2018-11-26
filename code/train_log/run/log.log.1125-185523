@@ -1,0 +1,101 @@
+[32m[1125 18:43:16 @logger.py:73][0m Argv: run.py --task 2 --gpu -1
+[32m[1125 18:43:50 @parallel.py:190][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[1125 18:43:50 @argtools.py:146][0m [5m[31mWRN[0m Install python-prctl so that processes can be cleaned with guarantee.
+[32m[1125 18:44:39 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_inputs() interface will be deprecated after 30 Mar. Use inputs() instead!
+[32m[1125 18:44:39 @trainers.py:52][0m Building graph for a single training tower ...
+[32m[1125 18:44:39 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1125 18:44:39 @registry.py:121][0m conv1_1 input: [None, 224, 224, 3]
+[32m[1125 18:44:39 @registry.py:129][0m conv1_1 output: [None, 224, 224, 64]
+[32m[1125 18:44:39 @registry.py:121][0m conv1_2 input: [None, 224, 224, 64]
+[32m[1125 18:44:39 @registry.py:129][0m conv1_2 output: [None, 224, 224, 64]
+[32m[1125 18:44:39 @registry.py:121][0m pool1 input: [None, 224, 224, 64]
+[32m[1125 18:44:39 @registry.py:129][0m pool1 output: [None, 112, 112, 64]
+[32m[1125 18:44:39 @registry.py:121][0m conv2_1 input: [None, 112, 112, 64]
+[32m[1125 18:44:39 @registry.py:129][0m conv2_1 output: [None, 112, 112, 128]
+[32m[1125 18:44:39 @registry.py:121][0m conv2_2 input: [None, 112, 112, 128]
+[32m[1125 18:44:39 @registry.py:129][0m conv2_2 output: [None, 112, 112, 128]
+[32m[1125 18:44:39 @registry.py:121][0m pool2 input: [None, 112, 112, 128]
+[32m[1125 18:44:39 @registry.py:129][0m pool2 output: [None, 56, 56, 128]
+[32m[1125 18:44:39 @registry.py:121][0m conv3_1 input: [None, 56, 56, 128]
+[32m[1125 18:44:39 @registry.py:129][0m conv3_1 output: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:121][0m conv3_2 input: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:129][0m conv3_2 output: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:121][0m conv3_3 input: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:129][0m conv3_3 output: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:121][0m pool3 input: [None, 56, 56, 256]
+[32m[1125 18:44:39 @registry.py:129][0m pool3 output: [None, 28, 28, 256]
+[32m[1125 18:44:39 @registry.py:121][0m conv4_1 input: [None, 28, 28, 256]
+[32m[1125 18:44:39 @registry.py:129][0m conv4_1 output: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:121][0m conv4_2 input: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:129][0m conv4_2 output: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:121][0m conv4_3 input: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:129][0m conv4_3 output: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:121][0m pool4 input: [None, 28, 28, 512]
+[32m[1125 18:44:39 @registry.py:129][0m pool4 output: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:121][0m conv5_1 input: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:129][0m conv5_1 output: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:121][0m conv5_2 input: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:129][0m conv5_2 output: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:121][0m conv5_3 input: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:129][0m conv5_3 output: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:121][0m pool5 input: [None, 14, 14, 512]
+[32m[1125 18:44:39 @registry.py:129][0m pool5 output: [None, 7, 7, 512]
+[32m[1125 18:44:39 @registry.py:121][0m fc6 input: [None, 7, 7, 512]
+[32m[1125 18:44:39 @registry.py:129][0m fc6 output: [None, 4096]
+[32m[1125 18:44:39 @registry.py:121][0m fc7 input: [None, 4096]
+[32m[1125 18:44:39 @registry.py:129][0m fc7 output: [None, 4096]
+[32m[1125 18:44:39 @registry.py:121][0m fc8 input: [None, 4096]
+[32m[1125 18:44:39 @registry.py:129][0m fc8 output: [None, 1000]
+[32m[1125 18:44:39 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_cost() and self.cost will be deprecated after 30 Mar. Return the cost tensor directly in build_graph() instead!
+[32m[1125 18:44:40 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_scalar_var [run.py:221] will be deprecated after 01 Aug. Simply use tf.get_variable instead!
+[32m[1125 18:44:40 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_optimizer() interface will be deprecated after 30 Mar. Use optimizer() instead!
+[32m[1125 18:44:40 @model_utils.py:64][0m [36mTrainable Variables: 
+[0mname         shape                   dim
+-----------  ----------------  ---------
+conv1_1/W:0  [3, 3, 3, 64]          1728
+conv1_1/b:0  [64]                     64
+conv1_2/W:0  [3, 3, 64, 64]        36864
+conv1_2/b:0  [64]                     64
+conv2_1/W:0  [3, 3, 64, 128]       73728
+conv2_1/b:0  [128]                   128
+conv2_2/W:0  [3, 3, 128, 128]     147456
+conv2_2/b:0  [128]                   128
+conv3_1/W:0  [3, 3, 128, 256]     294912
+conv3_1/b:0  [256]                   256
+conv3_2/W:0  [3, 3, 256, 256]     589824
+conv3_2/b:0  [256]                   256
+conv3_3/W:0  [3, 3, 256, 256]     589824
+conv3_3/b:0  [256]                   256
+conv4_1/W:0  [3, 3, 256, 512]    1179648
+conv4_1/b:0  [512]                   512
+conv4_2/W:0  [3, 3, 512, 512]    2359296
+conv4_2/b:0  [512]                   512
+conv4_3/W:0  [3, 3, 512, 512]    2359296
+conv4_3/b:0  [512]                   512
+conv5_1/W:0  [3, 3, 512, 512]    2359296
+conv5_1/b:0  [512]                   512
+conv5_2/W:0  [3, 3, 512, 512]    2359296
+conv5_2/b:0  [512]                   512
+conv5_3/W:0  [3, 3, 512, 512]    2359296
+conv5_3/b:0  [512]                   512
+fc6/W:0      [25088, 4096]     102760448
+fc6/b:0      [4096]                 4096
+fc7/W:0      [4096, 4096]       16777216
+fc7/b:0      [4096]                 4096
+fc8/W:0      [4096, 1000]        4096000
+fc8/b:0      [1000]                 1000[36m
+Total #vars=32, #params=138357544, size=527.79MB[0m
+[32m[1125 18:44:40 @base.py:209][0m Setup callbacks graph ...
+[32m[1125 18:44:40 @inference_runner.py:154][0m [InferenceRunner] Building tower 'InferenceTower' on device /gpu:0 ...
+[32m[1125 18:44:40 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1125 18:44:40 @summary.py:38][0m Maintain moving average summary of 2 tensors in collection MOVING_SUMMARY_OPS.
+[32m[1125 18:44:40 @summary.py:75][0m Summarizing collection 'summaries' of size 19.
+[32m[1125 18:44:40 @base.py:227][0m Creating the session ...
+[32m[1125 18:44:44 @base.py:233][0m Initializing the session ...
+[32m[1125 18:44:44 @sessinit.py:207][0m Variables to restore from dict: conv5_3/b:0, conv5_1/b:0, conv1_1/b:0, conv2_1/W:0, fc8/W:0, conv3_2/W:0, conv5_3/W:0, conv3_3/b:0, conv4_3/W:0, conv1_2/W:0, fc7/b:0, fc6/W:0, conv2_2/W:0, conv5_2/b:0, conv3_1/W:0, fc6/b:0, conv5_2/W:0, conv4_2/W:0, conv2_2/b:0, conv1_1/W:0, fc8/b:0, conv3_1/b:0, conv3_3/W:0, conv4_3/b:0, conv3_2/b:0, conv4_2/b:0, conv4_1/b:0, conv5_1/W:0, conv2_1/b:0, conv1_2/b:0, fc7/W:0, conv4_1/W:0
+[32m[1125 18:44:44 @sessinit.py:90][0m [5m[31mWRN[0m The following variables are in the graph, but not found in the dict: global_step:0, learning_rate:0
+[32m[1125 18:44:44 @sessinit.py:220][0m Restoring from dict ...
+[32m[1125 18:44:45 @varmanip.py:69][0m [5m[31mWRN[0m Variable fc6/W is reshaped (7, 7, 512, 4096)->(25088, 4096) during assigning
+[32m[1125 18:44:45 @base.py:240][0m Graph Finalized.
+[32m[1125 18:44:45 @inference_runner.py:101][0m [InferenceRunner] Will eval 75 iterations
+[32m[1125 18:44:45 @base.py:272][0m Start Epoch 1 ...
