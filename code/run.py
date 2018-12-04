@@ -9,6 +9,7 @@ import cv2
 import sys
 from glob import glob
 
+import tensorflow as tf
 from tensorpack import *
 from tensorpack.tfutils.sessinit import get_model_loader
 from tensorpack.tfutils.symbolic_functions import *
@@ -22,6 +23,7 @@ from tensorpack.dataflow.imgaug.transform import ResizeTransform, TransformAugme
 from vgg_model import VGGModel
 from your_model import YourModel
 import hyperparameters as hp
+#from tets import Resize
 
 """
 TASK 1: To train from scratch (on CPU) and validate:
@@ -86,18 +88,26 @@ class Scene15(RNGDataFlow):
         # Load images into numpy array
         self.imgs = np.zeros( (img_size, img_size, 3, len(self.imglist) ), dtype=np.float )
         for k in idxs:
+
             fname, label = self.imglist[k]
             fname = os.path.join(self.full_dir, fname)
             img = cv2.resize( cv2.imread(fname), (img_size, img_size) )
             img = img / 255.0 # You might want to remove this line for your standardization.
             self.imgs[:,:,:,k] = img
 
+
+
+            #print(test_data)
         ########################################################
         # TASK 1: Add standardization (feature normalization).
+        test_imgs = (self.imgs - np.expand_dims(self.imgs.mean(axis=-1), axis=-1)) / np.expand_dims(self.imgs.std(axis=-1), axis=-1)
+        self.imgs = test_imgs
+            #test_data = self.imgs[:,:,:,k]
 
+            #step_1 = (test_data - test_data.min(axis=0)) / (test_data.max(axis=0) - test_data.min(axis=0))
 
-
-        ########################################################
+            #case_2 = (test_data - test_data.mean(axis=0))
+            #self.imgs[:, :, :, k]=case_2
 
 
     def size(self):
@@ -120,7 +130,7 @@ This is where you would place any potential data augmentations.
 def get_data(datadir, task, train_or_test):
     isTrain = train_or_test == 'train'
     img_size = hp.img_size
-    if task == '2':	
+    if task == '2':
         img_size = 224 # Hard coded, as VGG-16 network must have this input size
 
     ds = Scene15(datadir, train_or_test, img_size)
@@ -131,29 +141,32 @@ def get_data(datadir, task, train_or_test):
             # TASK 1: Add data augmentations
             #
             # An example (that is duplicated work).
-            # In the Scene15 class, we resize each image to 
+            # In the Scene15 class, we resize each image to
             # 64x64 pixels as a preprocess. You then perform
             # standardization over the images in Task 1.
             #
-            # However, if we wanted to skip standardization, 
+            # However, if we wanted to skip standardization,
             # we could use an augmentation to resize the image
             # whenever it is needed:
             # imgaug.Resize( (img_size, img_size) )
             #
-            # Please use the same syntax to write more useful 
-            # augmentations. Read the documentation on the 
+            # Please use the same syntax to write more useful
+            # augmentations. Read the documentation on the
             # TensorPack image augmentation library and experiment!
             #################################################
-	    #imgaug.Resize( (64,64) )
-	   
+            imgaug.RandomCrop((img_size,img_size)),
+	        imgaug.Resize( (img_size,img_size) )
+            #imgaug.RandomCrop(img_size,img_size)
         ]
     else:
         # Validation/test time augmentations
         augmentors = [
-            # imgaug.Resize( (img_size, img_size) ) 
+            #imgaug.Resize( (img_size, img_size) )
         ]
+
     # TensorPack: Add data augmentations
     ds = AugmentImageComponent(ds, augmentors)
+
     # TensorPack: How to batch the data
     ds = BatchData(ds, hp.batch_size, remainder=not isTrain)
     if isTrain:
@@ -163,29 +176,6 @@ def get_data(datadir, task, train_or_test):
         if not sys.platform.lower().startswith('win'):
             ds = PrefetchData(ds, 4, 2)
     return ds
-
-
-
-
-class Resize(TransformAugmentorBase):
-    """ Resize image to a target size"""
-
-    def __init__(self, shape, interp=cv2.INTER_LINEAR):
-        """
-        Args:
-            shape: (h, w) tuple or a int
-            interp: cv2 interpolation method
-        """
-        shape = tuple(shape2d(shape))
-        self._init(locals())
-
-
-    def _get_augment_params(self, img):
-        return ResizeTransform(
-            img.shape[0], img.shape[1],
-            self.shape[0], self.shape[1], self.interp)
-
-
 
 """
 Program argument parsing, data setup, and training
@@ -246,3 +236,5 @@ if __name__ == '__main__':
     # TensorPack: Training with simple one at a time feed into batches
     # Old API: SimpleTrainer(config).train()
     launch_train_with_config(config, SimpleTrainer())
+
+

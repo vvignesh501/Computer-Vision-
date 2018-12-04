@@ -14,16 +14,16 @@ num_test_per_category = 100
 # numEpochs is the number of epochs. If you experiment with more
 # complex networks you might need to increase this. Likewise if you add
 # regularization that slows training.
-num_epochs = 30
+num_epochs = 50
 
 # batch_size defines the number of training examples per batch:
 # You don't need to modify this.
-batch_size = 20
+batch_size = 30
 
 # learning_rate is a critical parameter that can dramatically affect
 # whether training succeeds or fails. For most of the experiments in this
 # project the default learning rate is safe.
-learning_rate = 0.001
+learning_rate = 0.01
 
 # Momentum on the gradient (if you use a momentum-based optimizer)
 momentum = 0.01

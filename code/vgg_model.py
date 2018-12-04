@@ -48,7 +48,8 @@ class VGGModel(ModelDesc):
 
         # TensorPack: This is a slightly different notation for the network architecture
         # It pre-declares variables for all Conv2D layers (argscope).
-        # 
+        #
+
         with argscope(Conv2D, kernel_shape=3, nl=tf.nn.relu):
             logits = (LinearWrap(image)
                       .Conv2D('conv1_1', 64)
@@ -72,17 +73,27 @@ class VGGModel(ModelDesc):
                       .Conv2D('conv5_1', 512)
                       .Conv2D('conv5_2', 512)
                       .Conv2D('conv5_3', 512)
-                      .MaxPooling('pool5', 2)
+                      .MaxPooling('pool5', 2)()
                       # 7
-                      .FullyConnected('fc6', 4096, nl=tf.nn.relu)
-                      .FullyConnected('fc7', 4096, nl=tf.nn.relu)
-                      .FullyConnected('fc8', out_dim=1000, nl=tf.identity)()
+
+                      # .FullyConnected('fc6_new', 4096, nl=tf.nn.relu)
+                      # .FullyConnected('fc7_new', 4096, nl=tf.nn.relu)
+                      # .FullyConnected('fc8_new', out_dim=15, nl=tf.identity)()
                       )
+        logits = tf.stop_gradient(logits)
+        logits=tf.reshape(logits,[5,25088])
+        #keep_prob = tf.placeholder(tf.float32)
+        logits_2=  tf.contrib.layers.fully_connected(logits, 4096, tf.nn.relu)
+        logits_2 = tf.contrib.layers.fully_connected( logits_2, 4096, tf.nn.relu)
+        logits_2 = tf.contrib.layers.fully_connected(logits_2, 15, tf.identity)
 
+        #logits_2 = (logits.FullyConnected('fc6_new', logits_2, 4096, nl=tf.nn.relu)
+         #               .FullyConnected('fc7_new', 4096, nl=tf.nn.relu)
+         #               .FullyConnected('fc8_new', out_dim=15, nl=tf.identity)())
 
-        prob = tf.nn.softmax(logits, name='output')
+        prob = tf.nn.softmax(logits_2, name='output')
 
-        cost = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits, labels=label)
+        cost = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits_2, labels=label)
         cost = tf.reduce_mean(cost, name='cross_entropy_loss')
 
         wrong = prediction_incorrect(logits, label)
