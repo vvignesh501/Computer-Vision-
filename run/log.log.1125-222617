@@ -1,0 +1,306 @@
+[32m[1125 22:05:21 @logger.py:73][0m Argv: /home/vigneshv/sfuhome/vigneshv/Computer_Vision_Ass_6/project6_package/code/run.py --task 1 --gpu -1
+[32m[1125 22:06:00 @parallel.py:190][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[1125 22:06:00 @argtools.py:146][0m [5m[31mWRN[0m Install python-prctl so that processes can be cleaned with guarantee.
+[32m[1125 22:06:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_inputs() interface will be deprecated after 30 Mar. Use inputs() instead!
+[32m[1125 22:06:23 @trainers.py:52][0m Building graph for a single training tower ...
+[32m[1125 22:06:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1125 22:06:23 @registry.py:121][0m conv0 input: [None, 64, 64, 3]
+[32m[1125 22:06:23 @registry.py:129][0m conv0 output: [None, 56, 56, 10]
+[32m[1125 22:06:23 @registry.py:121][0m pool0 input: [None, 56, 56, 10]
+[32m[1125 22:06:23 @registry.py:129][0m pool0 output: [None, 8, 8, 10]
+[32m[1125 22:06:23 @registry.py:121][0m fc0 input: [None, 8, 8, 10]
+[32m[1125 22:06:23 @registry.py:129][0m fc0 output: [None, 15]
+[32m[1125 22:06:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_cost() and self.cost will be deprecated after 30 Mar. Return the cost tensor directly in build_graph() instead!
+[32m[1125 22:06:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_scalar_var [/home/vigneshv/sfuhome/vigneshv/Computer_Vision_Ass_6/project6_package/code/run.py:248] will be deprecated after 01 Aug. Simply use tf.get_variable instead!
+[32m[1125 22:06:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_optimizer() interface will be deprecated after 30 Mar. Use optimizer() instead!
+[32m[1125 22:06:24 @model_utils.py:64][0m [36mTrainable Variables: 
+[0mname       shape            dim
+---------  -------------  -----
+conv0/W:0  [9, 9, 3, 10]   2430
+conv0/b:0  [10]              10
+fc0/W:0    [640, 15]       9600
+fc0/b:0    [15]              15[36m
+Total #vars=4, #params=12055, size=0.05MB[0m
+[32m[1125 22:06:24 @base.py:209][0m Setup callbacks graph ...
+[32m[1125 22:06:24 @inference_runner.py:154][0m [InferenceRunner] Building tower 'InferenceTower' on device /gpu:0 ...
+[32m[1125 22:06:24 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1125 22:06:24 @summary.py:38][0m Maintain moving average summary of 2 tensors in collection MOVING_SUMMARY_OPS.
+[32m[1125 22:06:24 @summary.py:75][0m Summarizing collection 'summaries' of size 3.
+[32m[1125 22:06:24 @base.py:227][0m Creating the session ...
+[32m[1125 22:06:24 @base.py:233][0m Initializing the session ...
+[32m[1125 22:06:24 @base.py:240][0m Graph Finalized.
+[32m[1125 22:06:24 @inference_runner.py:101][0m [InferenceRunner] Will eval 75 iterations
+[32m[1125 22:06:24 @monitor.py:344][0m [5m[31mWRN[0m History epoch=30 from JSON is not the predecessor of the current starting_epoch=1
+[32m[1125 22:06:24 @monitor.py:345][0m [5m[31mWRN[0m If you want to resume old training, either use `AutoResumeTrainConfig` or correctly set the new starting_epoch yourself to avoid inconsistency. 
+[32m[1125 22:06:24 @monitor.py:352][0m [5m[31mWRN[0m Now, we will train with starting_epoch=1 and backup old json to train_log/run/stats.json.1125-220624
+[32m[1125 22:06:24 @base.py:272][0m Start Epoch 1 ...
+[32m[1125 22:06:34 @base.py:282][0m Epoch 1 (global_step 75) finished, time:9.58 seconds.
+[32m[1125 22:06:34 @saver.py:77][0m Model saved to train_log/run/model-75.
+[32m[1125 22:06:39 @monitor.py:459][0m cross_entropy_loss: 2.6976
+[32m[1125 22:06:39 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:06:39 @monitor.py:459][0m train_error: 0.91041
+[32m[1125 22:06:39 @monitor.py:459][0m validation_cost: 2.7383
+[32m[1125 22:06:39 @monitor.py:459][0m validation_error: 0.92667
+[32m[1125 22:06:39 @group.py:48][0m Callbacks took 5.805 sec in total. InferenceRunner: 5.58 seconds
+[32m[1125 22:06:39 @base.py:272][0m Start Epoch 2 ...
+[32m[1125 22:06:49 @base.py:282][0m Epoch 2 (global_step 150) finished, time:9.58 seconds.
+[32m[1125 22:06:49 @saver.py:77][0m Model saved to train_log/run/model-150.
+[32m[1125 22:06:55 @monitor.py:459][0m cross_entropy_loss: 2.6967
+[32m[1125 22:06:55 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:06:55 @monitor.py:459][0m train_error: 0.90272
+[32m[1125 22:06:55 @monitor.py:459][0m validation_cost: 2.7177
+[32m[1125 22:06:55 @monitor.py:459][0m validation_error: 0.92667
+[32m[1125 22:06:55 @group.py:48][0m Callbacks took 6.303 sec in total. InferenceRunner: 5.68 seconds
+[32m[1125 22:06:55 @base.py:272][0m Start Epoch 3 ...
+[32m[1125 22:07:05 @base.py:282][0m Epoch 3 (global_step 225) finished, time:9.63 seconds.
+[32m[1125 22:07:05 @saver.py:77][0m Model saved to train_log/run/model-225.
+[32m[1125 22:07:11 @monitor.py:459][0m cross_entropy_loss: 2.6768
+[32m[1125 22:07:11 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:07:11 @monitor.py:459][0m train_error: 0.91212
+[32m[1125 22:07:11 @monitor.py:459][0m validation_cost: 2.7034
+[32m[1125 22:07:11 @monitor.py:459][0m validation_error: 0.914
+[32m[1125 22:07:11 @group.py:48][0m Callbacks took 5.810 sec in total. InferenceRunner: 5.68 seconds
+[32m[1125 22:07:11 @base.py:272][0m Start Epoch 4 ...
+[32m[1125 22:07:20 @base.py:282][0m Epoch 4 (global_step 300) finished, time:9.53 seconds.
+[32m[1125 22:07:21 @saver.py:77][0m Model saved to train_log/run/model-300.
+[32m[1125 22:07:26 @monitor.py:459][0m cross_entropy_loss: 2.6559
+[32m[1125 22:07:26 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:07:26 @monitor.py:459][0m train_error: 0.8965
+[32m[1125 22:07:26 @monitor.py:459][0m validation_cost: 2.6898
+[32m[1125 22:07:26 @monitor.py:459][0m validation_error: 0.91933
+[32m[1125 22:07:26 @group.py:48][0m Callbacks took 5.777 sec in total. InferenceRunner: 5.53 seconds
+[32m[1125 22:07:26 @base.py:272][0m Start Epoch 5 ...
+[32m[1125 22:07:36 @base.py:282][0m Epoch 5 (global_step 375) finished, time:9.43 seconds.
+[32m[1125 22:07:36 @saver.py:77][0m Model saved to train_log/run/model-375.
+[32m[1125 22:07:42 @monitor.py:459][0m cross_entropy_loss: 2.6348
+[32m[1125 22:07:42 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:07:42 @monitor.py:459][0m train_error: 0.8843
+[32m[1125 22:07:42 @monitor.py:459][0m validation_cost: 2.6755
+[32m[1125 22:07:42 @monitor.py:459][0m validation_error: 0.91133
+[32m[1125 22:07:42 @group.py:48][0m Callbacks took 6.081 sec in total. InferenceRunner: 5.58 seconds
+[32m[1125 22:07:42 @base.py:272][0m Start Epoch 6 ...
+[32m[1125 22:07:52 @base.py:282][0m Epoch 6 (global_step 450) finished, time:9.93 seconds.
+[32m[1125 22:07:52 @saver.py:77][0m Model saved to train_log/run/model-450.
+[32m[1125 22:07:58 @monitor.py:459][0m cross_entropy_loss: 2.623
+[32m[1125 22:07:58 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:07:58 @monitor.py:459][0m train_error: 0.85335
+[32m[1125 22:07:58 @monitor.py:459][0m validation_cost: 2.6626
+[32m[1125 22:07:58 @monitor.py:459][0m validation_error: 0.898
+[32m[1125 22:07:58 @group.py:48][0m Callbacks took 6.177 sec in total. InferenceRunner: 5.53 seconds
+[32m[1125 22:07:58 @base.py:272][0m Start Epoch 7 ...
+[32m[1125 22:08:07 @base.py:282][0m Epoch 7 (global_step 525) finished, time:9.48 seconds.
+[32m[1125 22:08:07 @saver.py:77][0m Model saved to train_log/run/model-525.
+[32m[1125 22:08:13 @monitor.py:459][0m cross_entropy_loss: 2.6243
+[32m[1125 22:08:13 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:08:13 @monitor.py:459][0m train_error: 0.85423
+[32m[1125 22:08:13 @monitor.py:459][0m validation_cost: 2.6532
+[32m[1125 22:08:13 @monitor.py:459][0m validation_error: 0.88133
+[32m[1125 22:08:13 @group.py:48][0m Callbacks took 6.124 sec in total. InferenceRunner: 5.49 seconds
+[32m[1125 22:08:13 @base.py:272][0m Start Epoch 8 ...
+[32m[1125 22:08:23 @base.py:282][0m Epoch 8 (global_step 600) finished, time:9.43 seconds.
+[32m[1125 22:08:23 @saver.py:77][0m Model saved to train_log/run/model-600.
+[32m[1125 22:08:28 @monitor.py:459][0m cross_entropy_loss: 2.5975
+[32m[1125 22:08:28 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:08:28 @monitor.py:459][0m train_error: 0.85409
+[32m[1125 22:08:28 @monitor.py:459][0m validation_cost: 2.6432
+[32m[1125 22:08:28 @monitor.py:459][0m validation_error: 0.89667
+[32m[1125 22:08:28 @group.py:48][0m Callbacks took 5.564 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:08:28 @base.py:272][0m Start Epoch 9 ...
+[32m[1125 22:08:38 @base.py:282][0m Epoch 9 (global_step 675) finished, time:9.43 seconds.
+[32m[1125 22:08:38 @saver.py:77][0m Model saved to train_log/run/model-675.
+[32m[1125 22:08:43 @monitor.py:459][0m cross_entropy_loss: 2.5921
+[32m[1125 22:08:43 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:08:43 @monitor.py:459][0m train_error: 0.85203
+[32m[1125 22:08:43 @monitor.py:459][0m validation_cost: 2.6309
+[32m[1125 22:08:43 @monitor.py:459][0m validation_error: 0.87733
+[32m[1125 22:08:43 @group.py:48][0m Callbacks took 5.563 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:08:43 @base.py:272][0m Start Epoch 10 ...
+[32m[1125 22:08:53 @base.py:282][0m Epoch 10 (global_step 750) finished, time:9.43 seconds.
+[32m[1125 22:08:53 @saver.py:77][0m Model saved to train_log/run/model-750.
+[32m[1125 22:08:58 @monitor.py:459][0m cross_entropy_loss: 2.5709
+[32m[1125 22:08:58 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:08:58 @monitor.py:459][0m train_error: 0.82803
+[32m[1125 22:08:58 @monitor.py:459][0m validation_cost: 2.6181
+[32m[1125 22:08:58 @monitor.py:459][0m validation_error: 0.85733
+[32m[1125 22:08:58 @group.py:48][0m Callbacks took 5.663 sec in total. InferenceRunner: 5.53 seconds
+[32m[1125 22:08:58 @base.py:272][0m Start Epoch 11 ...
+[32m[1125 22:09:08 @base.py:282][0m Epoch 11 (global_step 825) finished, time:9.43 seconds.
+[32m[1125 22:09:08 @saver.py:77][0m Model saved to train_log/run/model-825.
+[32m[1125 22:09:13 @monitor.py:459][0m cross_entropy_loss: 2.5862
+[32m[1125 22:09:13 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:09:13 @monitor.py:459][0m train_error: 0.86392
+[32m[1125 22:09:13 @monitor.py:459][0m validation_cost: 2.6083
+[32m[1125 22:09:13 @monitor.py:459][0m validation_error: 0.87467
+[32m[1125 22:09:13 @group.py:48][0m Callbacks took 5.608 sec in total. InferenceRunner: 5.49 seconds
+[32m[1125 22:09:13 @base.py:272][0m Start Epoch 12 ...
+[32m[1125 22:09:23 @base.py:282][0m Epoch 12 (global_step 900) finished, time:9.43 seconds.
+[32m[1125 22:09:23 @saver.py:77][0m Model saved to train_log/run/model-900.
+[32m[1125 22:09:29 @monitor.py:459][0m cross_entropy_loss: 2.5302
+[32m[1125 22:09:29 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:09:29 @monitor.py:459][0m train_error: 0.79042
+[32m[1125 22:09:29 @monitor.py:459][0m validation_cost: 2.5949
+[32m[1125 22:09:29 @monitor.py:459][0m validation_error: 0.84867
+[32m[1125 22:09:29 @group.py:48][0m Callbacks took 5.595 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:09:29 @base.py:272][0m Start Epoch 13 ...
+[32m[1125 22:09:38 @base.py:282][0m Epoch 13 (global_step 975) finished, time:9.43 seconds.
+[32m[1125 22:09:38 @saver.py:77][0m Model saved to train_log/run/model-975.
+[32m[1125 22:09:44 @monitor.py:459][0m cross_entropy_loss: 2.5449
+[32m[1125 22:09:44 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:09:44 @monitor.py:459][0m train_error: 0.83789
+[32m[1125 22:09:44 @monitor.py:459][0m validation_cost: 2.5837
+[32m[1125 22:09:44 @monitor.py:459][0m validation_error: 0.848
+[32m[1125 22:09:44 @group.py:48][0m Callbacks took 5.589 sec in total. InferenceRunner: 5.49 seconds
+[32m[1125 22:09:44 @base.py:272][0m Start Epoch 14 ...
+[32m[1125 22:09:53 @base.py:282][0m Epoch 14 (global_step 1050) finished, time:9.43 seconds.
+[32m[1125 22:09:53 @saver.py:77][0m Model saved to train_log/run/model-1050.
+[32m[1125 22:09:59 @monitor.py:459][0m cross_entropy_loss: 2.529
+[32m[1125 22:09:59 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:09:59 @monitor.py:459][0m train_error: 0.79836
+[32m[1125 22:09:59 @monitor.py:459][0m validation_cost: 2.5738
+[32m[1125 22:09:59 @monitor.py:459][0m validation_error: 0.842
+[32m[1125 22:09:59 @group.py:48][0m Callbacks took 5.594 sec in total. InferenceRunner: 5.49 seconds
+[32m[1125 22:09:59 @base.py:272][0m Start Epoch 15 ...
+[32m[1125 22:10:08 @base.py:282][0m Epoch 15 (global_step 1125) finished, time:9.43 seconds.
+[32m[1125 22:10:08 @saver.py:77][0m Model saved to train_log/run/model-1125.
+[32m[1125 22:10:14 @monitor.py:459][0m cross_entropy_loss: 2.485
+[32m[1125 22:10:14 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:10:14 @monitor.py:459][0m train_error: 0.78026
+[32m[1125 22:10:14 @monitor.py:459][0m validation_cost: 2.5621
+[32m[1125 22:10:14 @monitor.py:459][0m validation_error: 0.83333
+[32m[1125 22:10:14 @group.py:48][0m Callbacks took 5.738 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:10:14 @base.py:272][0m Start Epoch 16 ...
+[32m[1125 22:10:23 @base.py:282][0m Epoch 16 (global_step 1200) finished, time:9.43 seconds.
+[32m[1125 22:10:23 @saver.py:77][0m Model saved to train_log/run/model-1200.
+[32m[1125 22:10:29 @monitor.py:459][0m cross_entropy_loss: 2.5036
+[32m[1125 22:10:29 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:10:29 @monitor.py:459][0m train_error: 0.7937
+[32m[1125 22:10:29 @monitor.py:459][0m validation_cost: 2.5468
+[32m[1125 22:10:29 @monitor.py:459][0m validation_error: 0.83
+[32m[1125 22:10:29 @group.py:48][0m Callbacks took 5.612 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:10:29 @base.py:272][0m Start Epoch 17 ...
+[32m[1125 22:10:38 @base.py:282][0m Epoch 17 (global_step 1275) finished, time:9.43 seconds.
+[32m[1125 22:10:38 @saver.py:77][0m Model saved to train_log/run/model-1275.
+[32m[1125 22:10:44 @monitor.py:459][0m cross_entropy_loss: 2.4783
+[32m[1125 22:10:44 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:10:44 @monitor.py:459][0m train_error: 0.76979
+[32m[1125 22:10:44 @monitor.py:459][0m validation_cost: 2.5356
+[32m[1125 22:10:44 @monitor.py:459][0m validation_error: 0.83067
+[32m[1125 22:10:44 @group.py:48][0m Callbacks took 5.611 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:10:44 @base.py:272][0m Start Epoch 18 ...
+[32m[1125 22:10:53 @base.py:282][0m Epoch 18 (global_step 1350) finished, time:9.43 seconds.
+[32m[1125 22:10:53 @saver.py:77][0m Model saved to train_log/run/model-1350.
+[32m[1125 22:10:59 @monitor.py:459][0m cross_entropy_loss: 2.467
+[32m[1125 22:10:59 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:10:59 @monitor.py:459][0m train_error: 0.79952
+[32m[1125 22:10:59 @monitor.py:459][0m validation_cost: 2.5271
+[32m[1125 22:10:59 @monitor.py:459][0m validation_error: 0.834
+[32m[1125 22:10:59 @group.py:48][0m Callbacks took 5.577 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:10:59 @base.py:272][0m Start Epoch 19 ...
+[32m[1125 22:11:08 @base.py:282][0m Epoch 19 (global_step 1425) finished, time:9.43 seconds.
+[32m[1125 22:11:08 @saver.py:77][0m Model saved to train_log/run/model-1425.
+[32m[1125 22:11:14 @monitor.py:459][0m cross_entropy_loss: 2.4553
+[32m[1125 22:11:14 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:11:14 @monitor.py:459][0m train_error: 0.77384
+[32m[1125 22:11:14 @monitor.py:459][0m validation_cost: 2.5169
+[32m[1125 22:11:14 @monitor.py:459][0m validation_error: 0.826
+[32m[1125 22:11:14 @group.py:48][0m Callbacks took 5.582 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:11:14 @base.py:272][0m Start Epoch 20 ...
+[32m[1125 22:11:23 @base.py:282][0m Epoch 20 (global_step 1500) finished, time:9.43 seconds.
+[32m[1125 22:11:23 @saver.py:77][0m Model saved to train_log/run/model-1500.
+[32m[1125 22:11:29 @monitor.py:459][0m cross_entropy_loss: 2.4423
+[32m[1125 22:11:29 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:11:29 @monitor.py:459][0m train_error: 0.77887
+[32m[1125 22:11:29 @monitor.py:459][0m validation_cost: 2.4982
+[32m[1125 22:11:29 @monitor.py:459][0m validation_error: 0.80533
+[32m[1125 22:11:29 @group.py:48][0m Callbacks took 5.627 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:11:29 @base.py:272][0m Start Epoch 21 ...
+[32m[1125 22:11:38 @base.py:282][0m Epoch 21 (global_step 1575) finished, time:9.43 seconds.
+[32m[1125 22:11:39 @saver.py:77][0m Model saved to train_log/run/model-1575.
+[32m[1125 22:11:44 @monitor.py:459][0m cross_entropy_loss: 2.4223
+[32m[1125 22:11:44 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:11:44 @monitor.py:459][0m train_error: 0.75954
+[32m[1125 22:11:44 @monitor.py:459][0m validation_cost: 2.4863
+[32m[1125 22:11:44 @monitor.py:459][0m validation_error: 0.804
+[32m[1125 22:11:44 @group.py:48][0m Callbacks took 5.688 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:11:44 @base.py:272][0m Start Epoch 22 ...
+[32m[1125 22:11:53 @base.py:282][0m Epoch 22 (global_step 1650) finished, time:9.43 seconds.
+[32m[1125 22:11:54 @saver.py:77][0m Model saved to train_log/run/model-1650.
+[32m[1125 22:12:00 @monitor.py:459][0m cross_entropy_loss: 2.3913
+[32m[1125 22:12:00 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:12:00 @monitor.py:459][0m train_error: 0.74515
+[32m[1125 22:12:00 @monitor.py:459][0m validation_cost: 2.4775
+[32m[1125 22:12:00 @monitor.py:459][0m validation_error: 0.79933
+[32m[1125 22:12:00 @group.py:48][0m Callbacks took 6.078 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:12:00 @base.py:272][0m Start Epoch 23 ...
+[32m[1125 22:12:09 @base.py:282][0m Epoch 23 (global_step 1725) finished, time:9.43 seconds.
+[32m[1125 22:12:09 @saver.py:77][0m Model saved to train_log/run/model-1725.
+[32m[1125 22:12:15 @monitor.py:459][0m cross_entropy_loss: 2.3965
+[32m[1125 22:12:15 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:12:15 @monitor.py:459][0m train_error: 0.77781
+[32m[1125 22:12:15 @monitor.py:459][0m validation_cost: 2.466
+[32m[1125 22:12:15 @monitor.py:459][0m validation_error: 0.81667
+[32m[1125 22:12:15 @group.py:48][0m Callbacks took 5.597 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:12:15 @base.py:272][0m Start Epoch 24 ...
+[32m[1125 22:12:24 @base.py:282][0m Epoch 24 (global_step 1800) finished, time:9.43 seconds.
+[32m[1125 22:12:25 @saver.py:77][0m Model saved to train_log/run/model-1800.
+[32m[1125 22:12:31 @monitor.py:459][0m cross_entropy_loss: 2.378
+[32m[1125 22:12:31 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:12:31 @monitor.py:459][0m train_error: 0.72724
+[32m[1125 22:12:31 @monitor.py:459][0m validation_cost: 2.4624
+[32m[1125 22:12:31 @monitor.py:459][0m validation_error: 0.78467
+[32m[1125 22:12:31 @group.py:48][0m Callbacks took 6.588 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:12:31 @base.py:272][0m Start Epoch 25 ...
+[32m[1125 22:12:40 @base.py:282][0m Epoch 25 (global_step 1875) finished, time:9.43 seconds.
+[32m[1125 22:12:40 @saver.py:77][0m Model saved to train_log/run/model-1875.
+[32m[1125 22:12:46 @monitor.py:459][0m cross_entropy_loss: 2.349
+[32m[1125 22:12:46 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:12:46 @monitor.py:459][0m train_error: 0.74987
+[32m[1125 22:12:46 @monitor.py:459][0m validation_cost: 2.4458
+[32m[1125 22:12:46 @monitor.py:459][0m validation_error: 0.80933
+[32m[1125 22:12:46 @group.py:48][0m Callbacks took 5.663 sec in total. InferenceRunner: 5.54 seconds
+[32m[1125 22:12:46 @base.py:272][0m Start Epoch 26 ...
+[32m[1125 22:12:55 @base.py:282][0m Epoch 26 (global_step 1950) finished, time:9.43 seconds.
+[32m[1125 22:12:55 @saver.py:77][0m Model saved to train_log/run/model-1950.
+[32m[1125 22:13:01 @monitor.py:459][0m cross_entropy_loss: 2.3357
+[32m[1125 22:13:01 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:13:01 @monitor.py:459][0m train_error: 0.73579
+[32m[1125 22:13:01 @monitor.py:459][0m validation_cost: 2.4347
+[32m[1125 22:13:01 @monitor.py:459][0m validation_error: 0.778
+[32m[1125 22:13:01 @group.py:48][0m Callbacks took 5.634 sec in total. InferenceRunner: 5.49 seconds
+[32m[1125 22:13:01 @base.py:272][0m Start Epoch 27 ...
+[32m[1125 22:13:10 @base.py:282][0m Epoch 27 (global_step 2025) finished, time:9.43 seconds.
+[32m[1125 22:13:10 @saver.py:77][0m Model saved to train_log/run/model-2025.
+[32m[1125 22:13:16 @monitor.py:459][0m cross_entropy_loss: 2.3589
+[32m[1125 22:13:16 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:13:16 @monitor.py:459][0m train_error: 0.75831
+[32m[1125 22:13:16 @monitor.py:459][0m validation_cost: 2.4307
+[32m[1125 22:13:16 @monitor.py:459][0m validation_error: 0.78933
+[32m[1125 22:13:16 @group.py:48][0m Callbacks took 5.612 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:13:16 @base.py:272][0m Start Epoch 28 ...
+[32m[1125 22:13:25 @base.py:282][0m Epoch 28 (global_step 2100) finished, time:9.43 seconds.
+[32m[1125 22:13:25 @saver.py:77][0m Model saved to train_log/run/model-2100.
+[32m[1125 22:13:31 @monitor.py:459][0m cross_entropy_loss: 2.3075
+[32m[1125 22:13:31 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:13:31 @monitor.py:459][0m train_error: 0.74167
+[32m[1125 22:13:31 @monitor.py:459][0m validation_cost: 2.4197
+[32m[1125 22:13:31 @monitor.py:459][0m validation_error: 0.786
+[32m[1125 22:13:31 @group.py:48][0m Callbacks took 5.634 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:13:31 @base.py:272][0m Start Epoch 29 ...
+[32m[1125 22:13:40 @base.py:282][0m Epoch 29 (global_step 2175) finished, time:9.43 seconds.
+[32m[1125 22:13:40 @saver.py:77][0m Model saved to train_log/run/model-2175.
+[32m[1125 22:13:46 @monitor.py:459][0m cross_entropy_loss: 2.3323
+[32m[1125 22:13:46 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:13:46 @monitor.py:459][0m train_error: 0.75113
+[32m[1125 22:13:46 @monitor.py:459][0m validation_cost: 2.4039
+[32m[1125 22:13:46 @monitor.py:459][0m validation_error: 0.784
+[32m[1125 22:13:46 @group.py:48][0m Callbacks took 5.659 sec in total. InferenceRunner: 5.53 seconds
+[32m[1125 22:13:46 @base.py:272][0m Start Epoch 30 ...
+[32m[1125 22:13:55 @base.py:282][0m Epoch 30 (global_step 2250) finished, time:9.48 seconds.
+[32m[1125 22:13:56 @saver.py:77][0m Model saved to train_log/run/model-2250.
+[32m[1125 22:14:02 @monitor.py:459][0m cross_entropy_loss: 2.3158
+[32m[1125 22:14:02 @monitor.py:459][0m learning_rate: 0.001
+[32m[1125 22:14:02 @monitor.py:459][0m train_error: 0.73681
+[32m[1125 22:14:02 @monitor.py:459][0m validation_cost: 2.4003
+[32m[1125 22:14:02 @monitor.py:459][0m validation_error: 0.79333
+[32m[1125 22:14:02 @group.py:48][0m Callbacks took 6.089 sec in total. InferenceRunner: 5.48 seconds
+[32m[1125 22:14:02 @base.py:286][0m Training has finished!

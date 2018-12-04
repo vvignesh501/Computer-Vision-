@@ -1,0 +1,12 @@
+[32m[1125 18:55:23 @logger.py:73][0m Argv: run.py --task 1 --gpu -1
+[32m[1125 18:55:52 @parallel.py:190][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[1125 18:55:52 @argtools.py:146][0m [5m[31mWRN[0m Install python-prctl so that processes can be cleaned with guarantee.
+[32m[1125 18:56:22 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_inputs() interface will be deprecated after 30 Mar. Use inputs() instead!
+[32m[1125 18:56:23 @trainers.py:52][0m Building graph for a single training tower ...
+[32m[1125 18:56:23 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1125 18:56:23 @registry.py:121][0m conv0 input: [None, 64, 64, 3]
+[32m[1125 18:56:23 @registry.py:129][0m conv0 output: [None, 56, 56, 10]
+[32m[1125 18:56:23 @registry.py:121][0m pool0 input: [None, 56, 56, 10]
+[32m[1125 18:56:23 @registry.py:129][0m pool0 output: [None, 8, 8, 10]
+[32m[1125 18:56:23 @registry.py:121][0m fc0 input: [None, 8, 8, 10]
+[32m[1125 18:56:23 @registry.py:129][0m fc0 output: [None, 15]
