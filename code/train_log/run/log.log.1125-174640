@@ -1,3 +1,0 @@
-[32m[1125 17:43:27 @logger.py:73][0m Argv: run.py --task 2 --gpu -1
-[32m[1125 17:44:00 @parallel.py:190][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
-[32m[1125 17:44:00 @argtools.py:146][0m [5m[31mWRN[0m Install python-prctl so that processes can be cleaned with guarantee.

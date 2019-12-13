@@ -1,1 +1,0 @@
-[{"train_error": 0.9230939149856567, "validation_error": 0.9333333333333333, "learning_rate": 0.0010000000474974513, "validation_cost": 3.11726450920105, "cross_entropy_loss": 9.19578742980957, "epoch_num": 1, "global_step": 75}]
