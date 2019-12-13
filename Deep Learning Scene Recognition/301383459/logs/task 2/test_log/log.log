@@ -1,0 +1,138 @@
+[32m[1130 16:39:10 @logger.py:73][0m Argv: /home/vigneshv/sfuhome/vigneshv/Computer_Vision_Ass_6/project6_package/code/run.py --task 2 --gpu 0
+[32m[1130 16:39:47 @parallel.py:190][0m [MultiProcessPrefetchData] Will fork a dataflow more than one times. This assumes the datapoints are i.i.d.
+[32m[1130 16:39:47 @argtools.py:146][0m [5m[31mWRN[0m Install python-prctl so that processes can be cleaned with guarantee.
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_inputs() interface will be deprecated after 30 Mar. Use inputs() instead!
+[32m[1130 16:40:31 @trainers.py:52][0m Building graph for a single training tower ...
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1130 16:40:31 @registry.py:121][0m conv1_1 input: [None, 224, 224, 3]
+[32m[1130 16:40:31 @registry.py:129][0m conv1_1 output: [None, 224, 224, 64]
+[32m[1130 16:40:31 @registry.py:121][0m conv1_2 input: [None, 224, 224, 64]
+[32m[1130 16:40:31 @registry.py:129][0m conv1_2 output: [None, 224, 224, 64]
+[32m[1130 16:40:31 @registry.py:121][0m pool1 input: [None, 224, 224, 64]
+[32m[1130 16:40:31 @registry.py:129][0m pool1 output: [None, 112, 112, 64]
+[32m[1130 16:40:31 @registry.py:121][0m conv2_1 input: [None, 112, 112, 64]
+[32m[1130 16:40:31 @registry.py:129][0m conv2_1 output: [None, 112, 112, 128]
+[32m[1130 16:40:31 @registry.py:121][0m conv2_2 input: [None, 112, 112, 128]
+[32m[1130 16:40:31 @registry.py:129][0m conv2_2 output: [None, 112, 112, 128]
+[32m[1130 16:40:31 @registry.py:121][0m pool2 input: [None, 112, 112, 128]
+[32m[1130 16:40:31 @registry.py:129][0m pool2 output: [None, 56, 56, 128]
+[32m[1130 16:40:31 @registry.py:121][0m conv3_1 input: [None, 56, 56, 128]
+[32m[1130 16:40:31 @registry.py:129][0m conv3_1 output: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:121][0m conv3_2 input: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:129][0m conv3_2 output: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:121][0m conv3_3 input: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:129][0m conv3_3 output: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:121][0m pool3 input: [None, 56, 56, 256]
+[32m[1130 16:40:31 @registry.py:129][0m pool3 output: [None, 28, 28, 256]
+[32m[1130 16:40:31 @registry.py:121][0m conv4_1 input: [None, 28, 28, 256]
+[32m[1130 16:40:31 @registry.py:129][0m conv4_1 output: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:121][0m conv4_2 input: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:129][0m conv4_2 output: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:121][0m conv4_3 input: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:129][0m conv4_3 output: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:121][0m pool4 input: [None, 28, 28, 512]
+[32m[1130 16:40:31 @registry.py:129][0m pool4 output: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:121][0m conv5_1 input: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:129][0m conv5_1 output: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:121][0m conv5_2 input: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:129][0m conv5_2 output: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:121][0m conv5_3 input: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:129][0m conv5_3 output: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:121][0m pool5 input: [None, 14, 14, 512]
+[32m[1130 16:40:31 @registry.py:129][0m pool5 output: [None, 7, 7, 512]
+[32m[1130 16:40:31 @registry.py:121][0m fc6_new input: [None, 7, 7, 512]
+[32m[1130 16:40:31 @registry.py:129][0m fc6_new output: [None, 4096]
+[32m[1130 16:40:31 @registry.py:121][0m fc7_new input: [None, 4096]
+[32m[1130 16:40:31 @registry.py:129][0m fc7_new output: [None, 4096]
+[32m[1130 16:40:31 @registry.py:121][0m fc8_new input: [None, 4096]
+[32m[1130 16:40:31 @registry.py:129][0m fc8_new output: [None, 15]
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_cost() and self.cost will be deprecated after 30 Mar. Return the cost tensor directly in build_graph() instead!
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] get_scalar_var [/home/vigneshv/sfuhome/vigneshv/Computer_Vision_Ass_6/project6_package/code/run.py:240] will be deprecated after 01 Aug. Simply use tf.get_variable instead!
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._get_optimizer() interface will be deprecated after 30 Mar. Use optimizer() instead!
+[32m[1130 16:40:31 @model_utils.py:64][0m [36mTrainable Variables: 
+[0mname         shape                   dim
+-----------  ----------------  ---------
+conv1_1/W:0  [3, 3, 3, 64]          1728
+conv1_1/b:0  [64]                     64
+conv1_2/W:0  [3, 3, 64, 64]        36864
+conv1_2/b:0  [64]                     64
+conv2_1/W:0  [3, 3, 64, 128]       73728
+conv2_1/b:0  [128]                   128
+conv2_2/W:0  [3, 3, 128, 128]     147456
+conv2_2/b:0  [128]                   128
+conv3_1/W:0  [3, 3, 128, 256]     294912
+conv3_1/b:0  [256]                   256
+conv3_2/W:0  [3, 3, 256, 256]     589824
+conv3_2/b:0  [256]                   256
+conv3_3/W:0  [3, 3, 256, 256]     589824
+conv3_3/b:0  [256]                   256
+conv4_1/W:0  [3, 3, 256, 512]    1179648
+conv4_1/b:0  [512]                   512
+conv4_2/W:0  [3, 3, 512, 512]    2359296
+conv4_2/b:0  [512]                   512
+conv4_3/W:0  [3, 3, 512, 512]    2359296
+conv4_3/b:0  [512]                   512
+conv5_1/W:0  [3, 3, 512, 512]    2359296
+conv5_1/b:0  [512]                   512
+conv5_2/W:0  [3, 3, 512, 512]    2359296
+conv5_2/b:0  [512]                   512
+conv5_3/W:0  [3, 3, 512, 512]    2359296
+conv5_3/b:0  [512]                   512
+fc6_new/W:0  [25088, 4096]     102760448
+fc6_new/b:0  [4096]                 4096
+fc7_new/W:0  [4096, 4096]       16777216
+fc7_new/b:0  [4096]                 4096
+fc8_new/W:0  [4096, 15]            61440
+fc8_new/b:0  [15]                     15[36m
+Total #vars=32, #params=134321999, size=512.40MB[0m
+[32m[1130 16:40:31 @base.py:209][0m Setup callbacks graph ...
+[32m[1130 16:40:31 @inference_runner.py:154][0m [InferenceRunner] Building tower 'InferenceTower' on device /gpu:0 ...
+[32m[1130 16:40:31 @develop.py:99][0m [5m[31mWRN[0m [Deprecated] ModelDescBase._build_graph() interface will be deprecated after 30 Mar. Use build_graph() instead!
+[32m[1130 16:40:32 @summary.py:38][0m Maintain moving average summary of 2 tensors in collection MOVING_SUMMARY_OPS.
+[32m[1130 16:40:32 @summary.py:75][0m Summarizing collection 'summaries' of size 19.
+[32m[1130 16:40:32 @base.py:227][0m Creating the session ...
+[32m[1130 16:40:38 @base.py:233][0m Initializing the session ...
+[32m[1130 16:40:38 @sessinit.py:207][0m Variables to restore from dict: conv5_3/b:0, conv5_1/b:0, conv1_1/b:0, conv2_1/W:0, conv3_2/W:0, conv5_3/W:0, conv3_3/b:0, conv4_3/W:0, conv1_2/W:0, conv2_2/W:0, conv5_2/b:0, conv3_1/W:0, conv5_2/W:0, conv4_2/W:0, conv2_2/b:0, conv1_1/W:0, conv3_1/b:0, conv3_3/W:0, conv4_3/b:0, conv3_2/b:0, conv4_2/b:0, conv4_1/b:0, conv5_1/W:0, conv2_1/b:0, conv1_2/b:0, conv4_1/W:0
+[32m[1130 16:40:38 @sessinit.py:90][0m [5m[31mWRN[0m The following variables are in the graph, but not found in the dict: fc6_new/W:0, fc6_new/b:0, fc7_new/W:0, fc7_new/b:0, fc8_new/W:0, fc8_new/b:0, global_step:0, learning_rate:0
+[32m[1130 16:40:38 @sessinit.py:90][0m [5m[31mWRN[0m The following variables are in the dict, but not found in the graph: fc6/W:0, fc6/b:0, fc7/W:0, fc7/b:0, fc8/W:0, fc8/b:0
+[32m[1130 16:40:38 @sessinit.py:220][0m Restoring from dict ...
+[32m[1130 16:40:38 @base.py:240][0m Graph Finalized.
+[32m[1130 16:40:38 @inference_runner.py:101][0m [InferenceRunner] Will eval 300 iterations
+[32m[1130 16:40:38 @base.py:272][0m Start Epoch 1 ...
+[32m[1130 17:15:16 @base.py:282][0m Epoch 1 (global_step 300) finished, time:34 minutes 38 seconds.
+[32m[1130 17:18:05 @saver.py:77][0m Model saved to train_log/run/model-300.
+[32m[1130 17:33:00 @monitor.py:459][0m cross_entropy_loss: 0.62204
+[32m[1130 17:33:00 @monitor.py:459][0m learning_rate: 1e-05
+[32m[1130 17:33:00 @monitor.py:459][0m train_error: 0.21799
+[32m[1130 17:33:00 @monitor.py:459][0m validation_cost: 0.61285
+[32m[1130 17:33:00 @monitor.py:459][0m validation_error: 0.19267
+[32m[1130 17:33:00 @group.py:48][0m Callbacks took 1064.106 sec in total. InferenceRunner: 14 minutes 55 seconds
+[32m[1130 17:33:00 @base.py:272][0m Start Epoch 2 ...
+[32m[1130 18:07:42 @base.py:282][0m Epoch 2 (global_step 600) finished, time:34 minutes 41 seconds.
+[32m[1130 18:09:55 @saver.py:77][0m Model saved to train_log/run/model-600.
+[32m[1130 18:24:50 @monitor.py:459][0m cross_entropy_loss: 0.20944
+[32m[1130 18:24:50 @monitor.py:459][0m learning_rate: 1e-05
+[32m[1130 18:24:50 @monitor.py:459][0m train_error: 0.066369
+[32m[1130 18:24:50 @monitor.py:459][0m validation_cost: 0.41422
+[32m[1130 18:24:50 @monitor.py:459][0m validation_error: 0.144
+[32m[1130 18:24:50 @group.py:48][0m Callbacks took 1027.700 sec in total. InferenceRunner: 14 minutes 55 seconds
+[32m[1130 18:24:50 @base.py:272][0m Start Epoch 3 ...
+[32m[1130 18:59:35 @base.py:282][0m Epoch 3 (global_step 900) finished, time:34 minutes 45 seconds.
+[32m[1130 19:01:46 @saver.py:77][0m Model saved to train_log/run/model-900.
+[32m[1130 19:16:44 @monitor.py:459][0m cross_entropy_loss: 0.048672
+[32m[1130 19:16:44 @monitor.py:459][0m learning_rate: 1e-05
+[32m[1130 19:16:44 @monitor.py:459][0m train_error: 0.0091465
+[32m[1130 19:16:44 @monitor.py:459][0m validation_cost: 0.61243
+[32m[1130 19:16:44 @monitor.py:459][0m validation_error: 0.152
+[32m[1130 19:16:44 @group.py:48][0m Callbacks took 1029.103 sec in total. InferenceRunner: 14 minutes 58 seconds
+[32m[1130 19:16:44 @base.py:272][0m Start Epoch 4 ...
+[32m[1130 19:51:30 @base.py:282][0m Epoch 4 (global_step 1200) finished, time:34 minutes 45 seconds.
+[32m[1130 19:54:15 @saver.py:77][0m Model saved to train_log/run/model-1200.
+[32m[1130 20:09:13 @monitor.py:459][0m cross_entropy_loss: 0.042662
+[32m[1130 20:09:13 @monitor.py:459][0m learning_rate: 1e-05
+[32m[1130 20:09:13 @monitor.py:459][0m train_error: 0.0095958
+[32m[1130 20:09:13 @monitor.py:459][0m validation_cost: 0.90341
+[32m[1130 20:09:13 @monitor.py:459][0m validation_error: 0.16333
+[32m[1130 20:09:13 @group.py:48][0m Callbacks took 1063.002 sec in total. InferenceRunner: 14 minutes 57 seconds
+[32m[1130 20:09:13 @base.py:272][0m Start Epoch 5 ...
+[32m[1130 20:44:15 @base.py:282][0m Epoch 5 (global_step 1500) finished, time:35 minutes 2 seconds.
